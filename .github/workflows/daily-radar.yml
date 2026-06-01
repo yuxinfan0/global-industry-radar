@@ -1,0 +1,24 @@
+name: Daily Industry Radar
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "35 22 * * *"
+
+jobs:
+  build-radar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Generate radar
+        run: python3 scripts/etl.py --date "$(date -u +%F)" --out work/latest-radar.json --supabase
+      - name: Evaluate radar
+        run: python3 scripts/harness.py work/latest-radar.json
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: latest-radar
+          path: work/latest-radar.json

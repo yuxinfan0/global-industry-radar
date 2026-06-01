@@ -1,0 +1,195 @@
+[
+  {
+    "id": "ai-memory-hbm",
+    "name": "AI 算力 / 内存 / HBM",
+    "aliases": ["HBM", "DRAM", "NAND", "AI memory", "GPU memory"],
+    "keywords": ["HBM", "DRAM", "NAND", "AI server", "data center memory", "CoWoS", "GPU supply"],
+    "instruments": [
+      { "symbol": "NVDA.US", "name": "NVIDIA", "market": "US", "role": "AI accelerator demand" },
+      { "symbol": "MU.US", "name": "Micron", "market": "US", "role": "DRAM/HBM supply" },
+      { "symbol": "005930.KR", "name": "Samsung Electronics", "market": "KR", "role": "memory leader" },
+      { "symbol": "000660.KR", "name": "SK Hynix", "market": "KR", "role": "HBM leader" },
+      { "symbol": "TSM.US", "name": "TSMC ADR", "market": "US", "role": "advanced packaging bottleneck" }
+    ],
+    "supply_chain": ["GPU/ASIC", "HBM stacks", "advanced packaging", "substrates", "AI server OEMs"],
+    "core_variables": ["AI training/inference capex", "HBM bit growth", "wafer allocation", "packaging capacity", "memory pricing"],
+    "private_segments": ["HBM process materials", "thermal management", "CXL memory pooling", "AI server power modules", "inspection/metrology"],
+    "counter_indicators": ["cloud capex cuts", "HBM oversupply", "GPU export restrictions", "memory ASP rollover"]
+  },
+  {
+    "id": "advanced-packaging",
+    "name": "先进封装",
+    "aliases": ["CoWoS", "chiplet", "advanced packaging", "substrate"],
+    "keywords": ["advanced packaging", "CoWoS", "chiplet", "interposer", "ABF substrate"],
+    "instruments": [
+      { "symbol": "TSM.US", "name": "TSMC ADR", "market": "US", "role": "foundry capacity" },
+      { "symbol": "ASX.US", "name": "ASE Technology", "market": "US", "role": "OSAT" },
+      { "symbol": "AMKR.US", "name": "Amkor", "market": "US", "role": "OSAT" },
+      { "symbol": "INTC.US", "name": "Intel", "market": "US", "role": "advanced packaging roadmap" }
+    ],
+    "supply_chain": ["foundry", "OSAT", "substrate", "bonding", "inspection"],
+    "core_variables": ["AI accelerator volume", "interposer capacity", "substrate availability", "yield learning"],
+    "private_segments": ["hybrid bonding tools", "advanced substrate materials", "thermal interface materials", "package inspection"],
+    "counter_indicators": ["AI accelerator digestion", "packaging capacity overbuild", "yield bottlenecks"]
+  },
+  {
+    "id": "solar-pv",
+    "name": "光伏",
+    "aliases": ["PV", "solar", "polysilicon", "module"],
+    "keywords": ["solar module", "PV installation", "polysilicon", "TOPCon", "HJT", "inverter"],
+    "instruments": [
+      { "symbol": "FSLR.US", "name": "First Solar", "market": "US", "role": "thin-film module" },
+      { "symbol": "ENPH.US", "name": "Enphase", "market": "US", "role": "microinverter" },
+      { "symbol": "SEDG.US", "name": "SolarEdge", "market": "US", "role": "inverter" },
+      { "symbol": "TAN.US", "name": "Invesco Solar ETF", "market": "US", "role": "sector proxy" }
+    ],
+    "supply_chain": ["polysilicon", "wafers", "cells", "modules", "inverters", "EPC"],
+    "core_variables": ["module price", "installation growth", "policy incentives", "grid connection", "inventory"],
+    "private_segments": ["perovskite tandem", "PV recycling", "smart inverters", "O&M robotics", "distributed energy software"],
+    "counter_indicators": ["module price war", "policy rollback", "grid curtailment", "financing cost increase"]
+  },
+  {
+    "id": "energy-storage",
+    "name": "储能",
+    "aliases": ["battery storage", "BESS", "LFP", "grid storage"],
+    "keywords": ["BESS", "battery storage", "LFP", "grid-scale storage", "duration storage"],
+    "instruments": [
+      { "symbol": "TSLA.US", "name": "Tesla", "market": "US", "role": "Megapack" },
+      { "symbol": "FLNC.US", "name": "Fluence", "market": "US", "role": "BESS integrator" },
+      { "symbol": "ALB.US", "name": "Albemarle", "market": "US", "role": "lithium supply" },
+      { "symbol": "LIT.US", "name": "Global X Lithium & Battery Tech ETF", "market": "US", "role": "battery chain proxy" }
+    ],
+    "supply_chain": ["cells", "PCS", "EMS", "thermal safety", "system integration", "grid interconnection"],
+    "core_variables": ["renewables penetration", "battery cell price", "interconnection queues", "ancillary market revenue"],
+    "private_segments": ["long-duration storage", "battery safety analytics", "grid EMS", "second-life battery systems"],
+    "counter_indicators": ["cell price rebound", "project delays", "fire incidents", "merchant revenue compression"]
+  },
+  {
+    "id": "power-grid",
+    "name": "电网设备",
+    "aliases": ["grid equipment", "transformer", "switchgear", "HVDC"],
+    "keywords": ["transformer", "switchgear", "HVDC", "grid upgrade", "interconnection queue"],
+    "instruments": [
+      { "symbol": "ETN.US", "name": "Eaton", "market": "US", "role": "electrical equipment" },
+      { "symbol": "PWR.US", "name": "Quanta Services", "market": "US", "role": "grid construction" },
+      { "symbol": "ABB.US", "name": "ABB ADR", "market": "US", "role": "electrification" },
+      { "symbol": "GEV.US", "name": "GE Vernova", "market": "US", "role": "grid and power" }
+    ],
+    "supply_chain": ["transformers", "switchgear", "cables", "HVDC", "substation construction", "grid software"],
+    "core_variables": ["data center load", "renewables interconnection", "transformer lead times", "utility capex"],
+    "private_segments": ["grid monitoring sensors", "substation automation", "transformer cooling", "AI load forecasting"],
+    "counter_indicators": ["utility capex delays", "commodity cost pressure", "permitting slowdown"]
+  },
+  {
+    "id": "copper-electrification",
+    "name": "铜 / 电气化",
+    "aliases": ["copper", "electrification", "mining"],
+    "keywords": ["copper demand", "electrification", "mine supply", "smelter", "grid copper"],
+    "instruments": [
+      { "symbol": "FCX.US", "name": "Freeport-McMoRan", "market": "US", "role": "copper miner" },
+      { "symbol": "SCCO.US", "name": "Southern Copper", "market": "US", "role": "copper miner" },
+      { "symbol": "COPX.US", "name": "Global X Copper Miners ETF", "market": "US", "role": "sector proxy" },
+      { "symbol": "HG.F", "name": "Copper futures proxy", "market": "COMMODITY", "role": "price proxy" }
+    ],
+    "supply_chain": ["mining", "smelting", "wire/cable", "motors", "grid", "EV charging"],
+    "core_variables": ["mine disruptions", "grid capex", "EV penetration", "Chinese demand", "inventory days"],
+    "private_segments": ["copper recycling", "substitute materials", "mine digitalization", "high-performance cables"],
+    "counter_indicators": ["China construction slowdown", "inventory rebuild", "scrap supply surge"]
+  },
+  {
+    "id": "robotics",
+    "name": "机器人",
+    "aliases": ["humanoid", "industrial robot", "automation"],
+    "keywords": ["humanoid robot", "industrial automation", "servo", "actuator", "robotics"],
+    "instruments": [
+      { "symbol": "ROK.US", "name": "Rockwell Automation", "market": "US", "role": "industrial automation" },
+      { "symbol": "ISRG.US", "name": "Intuitive Surgical", "market": "US", "role": "surgical robotics" },
+      { "symbol": "BOTZ.US", "name": "Global X Robotics & AI ETF", "market": "US", "role": "sector proxy" },
+      { "symbol": "TSLA.US", "name": "Tesla", "market": "US", "role": "humanoid optionality" }
+    ],
+    "supply_chain": ["actuators", "reducers", "servo drives", "controllers", "perception", "system integration"],
+    "core_variables": ["labor shortage", "factory automation capex", "model capability", "actuator cost curve"],
+    "private_segments": ["dexterous hands", "robot foundation models", "industrial co-pilots", "actuator modules"],
+    "counter_indicators": ["capex recession", "slow deployment ROI", "safety/regulatory friction"]
+  },
+  {
+    "id": "nuclear-power",
+    "name": "核电",
+    "aliases": ["SMR", "uranium", "nuclear"],
+    "keywords": ["nuclear restart", "SMR", "uranium", "reactor", "data center power"],
+    "instruments": [
+      { "symbol": "CCJ.US", "name": "Cameco", "market": "US", "role": "uranium miner" },
+      { "symbol": "URA.US", "name": "Global X Uranium ETF", "market": "US", "role": "uranium proxy" },
+      { "symbol": "CEG.US", "name": "Constellation Energy", "market": "US", "role": "nuclear fleet" },
+      { "symbol": "SMR.US", "name": "NuScale", "market": "US", "role": "SMR optionality" }
+    ],
+    "supply_chain": ["uranium mining", "conversion", "enrichment", "reactor components", "SMR deployment", "power offtake"],
+    "core_variables": ["power demand", "policy support", "uranium contracting", "SMR licensing", "restart economics"],
+    "private_segments": ["nuclear QA software", "advanced materials", "SMR supply chain", "radiation monitoring"],
+    "counter_indicators": ["licensing delay", "project cost overrun", "uranium price correction"]
+  },
+  {
+    "id": "glp-1",
+    "name": "GLP-1 / 代谢健康",
+    "aliases": ["GLP-1", "obesity drug", "metabolic health"],
+    "keywords": ["GLP-1", "obesity", "diabetes", "cardiometabolic", "peptide manufacturing"],
+    "instruments": [
+      { "symbol": "LLY.US", "name": "Eli Lilly", "market": "US", "role": "GLP-1 leader" },
+      { "symbol": "NVO.US", "name": "Novo Nordisk ADR", "market": "US", "role": "GLP-1 leader" },
+      { "symbol": "AMGN.US", "name": "Amgen", "market": "US", "role": "metabolic pipeline" },
+      { "symbol": "XBI.US", "name": "SPDR Biotech ETF", "market": "US", "role": "biotech risk appetite" }
+    ],
+    "supply_chain": ["peptide API", "fill-finish", "autoinjectors", "clinical pipeline", "digital adherence"],
+    "core_variables": ["prescription growth", "manufacturing capacity", "payer coverage", "oral formulation progress"],
+    "private_segments": ["peptide CDMO", "companion diagnostics", "metabolic care software", "side-effect management"],
+    "counter_indicators": ["pricing pressure", "coverage restriction", "safety signal", "manufacturing shortage"]
+  },
+  {
+    "id": "defense-tech",
+    "name": "国防科技",
+    "aliases": ["defense", "drone", "ISR", "missile"],
+    "keywords": ["defense budget", "drone", "ISR", "missile", "electronic warfare"],
+    "instruments": [
+      { "symbol": "LMT.US", "name": "Lockheed Martin", "market": "US", "role": "prime contractor" },
+      { "symbol": "RTX.US", "name": "RTX", "market": "US", "role": "missiles and sensors" },
+      { "symbol": "NOC.US", "name": "Northrop Grumman", "market": "US", "role": "aerospace defense" },
+      { "symbol": "ITA.US", "name": "iShares US Aerospace & Defense ETF", "market": "US", "role": "sector proxy" }
+    ],
+    "supply_chain": ["sensors", "drones", "munitions", "satellite ISR", "cyber", "manufacturing capacity"],
+    "core_variables": ["defense budgets", "conflict intensity", "munitions replenishment", "export approvals"],
+    "private_segments": ["autonomous drones", "counter-UAS", "dual-use sensing", "secure communications"],
+    "counter_indicators": ["budget delays", "procurement bottlenecks", "export restrictions"]
+  },
+  {
+    "id": "shipping-logistics",
+    "name": "海运 / 物流",
+    "aliases": ["shipping", "freight", "container", "tanker"],
+    "keywords": ["freight rates", "container shipping", "tanker", "port congestion", "red sea"],
+    "instruments": [
+      { "symbol": "ZIM.US", "name": "ZIM", "market": "US", "role": "container shipping" },
+      { "symbol": "DAC.US", "name": "Danaos", "market": "US", "role": "containership owner" },
+      { "symbol": "MATX.US", "name": "Matson", "market": "US", "role": "ocean logistics" },
+      { "symbol": "BOAT.US", "name": "SonicShares Global Shipping ETF", "market": "US", "role": "sector proxy" }
+    ],
+    "supply_chain": ["shipping capacity", "ports", "forwarders", "charter rates", "fuel", "trade routes"],
+    "core_variables": ["freight rates", "route disruption", "fleet orderbook", "global trade volume", "fuel cost"],
+    "private_segments": ["freight analytics", "port automation", "green shipping fuels", "supply chain visibility"],
+    "counter_indicators": ["new vessel deliveries", "demand slowdown", "route normalization"]
+  },
+  {
+    "id": "data-center-power",
+    "name": "数据中心电力",
+    "aliases": ["data center power", "AI power", "backup power", "cooling"],
+    "keywords": ["data center power", "AI load", "cooling", "backup power", "PPA", "interconnection"],
+    "instruments": [
+      { "symbol": "VRT.US", "name": "Vertiv", "market": "US", "role": "power and cooling" },
+      { "symbol": "ETN.US", "name": "Eaton", "market": "US", "role": "electrical equipment" },
+      { "symbol": "CEG.US", "name": "Constellation Energy", "market": "US", "role": "power supplier" },
+      { "symbol": "EQIX.US", "name": "Equinix", "market": "US", "role": "data center operator" }
+    ],
+    "supply_chain": ["UPS", "cooling", "switchgear", "power procurement", "grid interconnection", "backup generation"],
+    "core_variables": ["AI data center capex", "rack density", "power availability", "cooling efficiency", "utility PPA"],
+    "private_segments": ["liquid cooling", "power orchestration", "data center microgrids", "thermal materials"],
+    "counter_indicators": ["AI capex pause", "power permitting delays", "cooling technology commoditization"]
+  }
+]
